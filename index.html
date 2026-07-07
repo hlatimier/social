@@ -1,31 +1,4 @@
 
-
-
-
-
-<aside class="sidebar">
-
-
-<h3>
-Communautés
-</h3>
-
-
-<div>
-🟠 r/france
-</div>
-
-
-<div>
-🟠 r/lego
-</div>
-
-
-<div>
-🟠 r/gaming
-</div>
-
-
 <div>
 🟠 r/cinema
 </div>
@@ -117,61 +90,7 @@ ${text}
 `;
 
 
-document.getElementById("posts")
-.prepend(post);
 
-
-document.getElementById("title").value="";
-
-document.getElementById("text").value="";
-
-}
-
-
-
-
-
-function darkMode(){
-
-document.body.classList.toggle("dark");
-
-}
-
-
-
-
-
-document.getElementById("search")
-.addEventListener("keyup",function(){
-
-let value=this.value.toLowerCase();
-
-
-document.querySelectorAll(".post")
-.forEach(post=>{
-
-
-if(post.innerText.toLowerCase().includes(value)){
-
-post.style.display="flex";
-
-}
-
-else{
-
-post.style.display="none";
-
-}
-
-
-});
-
-
-});
-
-
-
-</script>
 
 
 </body>
