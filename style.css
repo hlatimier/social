@@ -1,1 +1,374 @@
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
+
+body{
+
+    margin:0;
+    background:#dae0e6;
+    color:#222;
+
+}
+
+
+
+/* BARRE DU HAUT */
+
+header{
+
+    height:65px;
+    background:white;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:0 30px;
+    position:sticky;
+    top:0;
+    border-bottom:1px solid #ccc;
+    z-index:10;
+
+}
+
+
+
+.logo{
+
+    font-size:30px;
+    font-weight:bold;
+    color:#ff4500;
+
+}
+
+
+
+#search{
+
+    flex:1;
+    max-width:600px;
+    padding:12px 20px;
+    border-radius:25px;
+    border:1px solid #ccc;
+    background:#f6f7f8;
+
+}
+
+
+
+button{
+
+    cursor:pointer;
+    border:none;
+    border-radius:20px;
+    padding:8px 15px;
+
+}
+
+
+
+
+#darkBtn{
+
+    background:#333;
+    color:white;
+
+}
+
+
+
+/* STRUCTURE */
+
+.layout{
+
+    max-width:1200px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:1fr 300px;
+    gap:25px;
+
+}
+
+
+
+
+/* CREATION */
+
+.create{
+
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+
+}
+
+
+
+.create input,
+.create textarea{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+
+}
+
+
+
+.create textarea{
+
+    height:100px;
+    resize:none;
+
+}
+
+
+
+#publish{
+
+    background:#ff4500;
+    color:white;
+    font-weight:bold;
+
+}
+
+
+
+/* POSTS */
+
+.post{
+
+    display:flex;
+    background:white;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+    overflow:hidden;
+
+}
+
+
+
+.votes{
+
+    width:70px;
+    background:#f7f7f7;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:15px;
+    gap:10px;
+
+}
+
+
+
+.votes button{
+
+    background:none;
+    font-size:20px;
+
+}
+
+
+
+.up:hover{
+
+    color:#ff4500;
+
+}
+
+
+
+.down:hover{
+
+    color:#555;
+
+}
+
+
+
+.score{
+
+    font-weight:bold;
+
+}
+
+
+
+.postBody{
+
+    padding:15px;
+    flex:1;
+
+}
+
+
+
+.community{
+
+    color:#666;
+    font-size:14px;
+
+}
+
+
+
+.postBody h2{
+
+    margin:10px 0;
+
+}
+
+
+
+.actions{
+
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+
+}
+
+
+
+.actions button{
+
+    background:#eee;
+
+}
+
+
+
+.delete{
+
+    background:#d93025!important;
+    color:white;
+
+}
+
+
+
+.delete:hover{
+
+    background:#b71c1c!important;
+
+}
+
+
+
+/* MENU DROIT */
+
+aside{
+
+    background:white;
+    height:max-content;
+    padding:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+
+}
+
+
+
+.communityBox{
+
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+
+/* MODE SOMBRE */
+
+
+.dark{
+
+    background:#030303;
+    color:white;
+
+}
+
+
+
+.dark header,
+.dark .create,
+.dark .post,
+.dark aside{
+
+    background:#1a1a1b;
+    color:white;
+
+}
+
+
+
+.dark .votes{
+
+    background:#222;
+
+}
+
+
+
+.dark #search{
+
+    background:#333;
+    color:white;
+
+}
+
+
+
+.dark .actions button{
+
+    background:#333;
+    color:white;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:800px){
+
+.layout{
+
+    grid-template-columns:1fr;
+    width:95%;
+
+}
+
+
+aside{
+
+    display:none;
+
+}
+
+
+header{
+
+    padding:0 10px;
+
+}
+
+
+.logo{
+
+    font-size:22px;
+
+}
+
+
+}
