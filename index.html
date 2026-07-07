@@ -1,7 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
 
-<div>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reddit Clone</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🟠 reddit
+    </div>
+
+
+    <input 
+        id="search"
+        type="text"
+        placeholder="Rechercher sur Reddit">
+
+
+    <button id="darkBtn">
+        🌙
+    </button>
+
+
+</header>
+
+
+
+<div class="layout">
+
+
+<main>
+
+
+<section class="create">
+
+<h2>Créer une publication</h2>
+
+
+<input 
+id="postTitle"
+placeholder="Titre du message">
+
+
+<textarea
+id="postText"
+placeholder="Votre message">
+</textarea>
+
+
+<button id="publish">
+Publier
+</button>
+
+
+</section>
+
+
+
+
+<section id="posts">
+
+
+<!-- Exemple de publication -->
+
+<article class="post">
+
+
+<div class="votes">
+
+<button class="up">
+▲
+</button>
+
+<span class="score">
+245
+</span>
+
+<button class="down">
+▼
+</button>
+
+
+</div>
+
+
+
+<div class="postBody">
+
+
+<div class="community">
+
+r/lego • aujourd'hui
+
+</div>
+
+
+<h2>
+Mon nouveau projet LEGO
+</h2>
+
+
+<p>
+J'ai construit une grande maquette en briques.
+</p>
+
+
+
+<div class="actions">
+
+<button>
+💬 56 commentaires
+</button>
+
+
+<button>
+↗ Partager
+</button>
+
+
+<button class="delete">
+🗑 Supprimer
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</article>
+
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+
+<aside>
+
+
+<h2>
+Communautés populaires
+</h2>
+
+
+<div class="communityBox">
+🟠 r/france
+</div>
+
+
+<div class="communityBox">
+🟠 r/lego
+</div>
+
+
+<div class="communityBox">
+🟠 r/gaming
+</div>
+
+
+<div class="communityBox">
 🟠 r/cinema
 </div>
+
 
 
 </aside>
@@ -12,86 +192,9 @@
 
 
 
-
-<script>
-
-
-function vote(element,value){
-
-let score=element.parentElement.querySelector("span");
-
-score.innerHTML=parseInt(score.innerHTML)+value;
-
-}
-
-
-
-
-function addPost(){
-
-let title=document.getElementById("title").value;
-
-let text=document.getElementById("text").value;
-
-
-if(title==""){
-
-alert("Ajoute un titre");
-
-return;
-
-}
-
-
-
-let post=document.createElement("div");
-
-post.className="post";
-
-
-post.innerHTML=`
-
-<div class="votes">
-
-<div class="up" onclick="vote(this,1)">▲</div>
-
-<span>1</span>
-
-<div class="down" onclick="vote(this,-1)">▼</div>
-
-</div>
-
-
-<div class="content">
-
-<div class="sub">
-r/new • maintenant
-</div>
-
-
-<div class="title">
-${title}
-</div>
-
-
-<p>
-${text}
-</p>
-
-
-<div class="actions">
-💬 0 commentaires
-↗ Partager
-</div>
-
-
-</div>
-
-`;
-
-
-
+<script src="script.js"></script>
 
 
 </body>
+
 </html>
